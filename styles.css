@@ -33,18 +33,6 @@ body {
   transform: scale(1.1);
 }
 
-.btn-outline-light {
-  border: 2px solid #fff;
-  color: #fff;
-  transition: transform 0.3s ease;
-}
-
-.btn-outline-light:hover {
-  background-color: #fff;
-  color: #ff6f61;
-  transform: scale(1.1);
-}
-
 /* Confirmation Message */
 .confirmation-message {
   text-align: center;
