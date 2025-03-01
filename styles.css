@@ -1,0 +1,64 @@
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Landing Screen */
+.landing-screen {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Buttons */
+.btn-light {
+  background-color: #fff;
+  color: #ff6f61;
+  border: none;
+  transition: transform 0.3s ease;
+}
+
+.btn-light:hover {
+  transform: scale(1.1);
+}
+
+.btn-outline-light {
+  border: 2px solid #fff;
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.btn-outline-light:hover {
+  background-color: #fff;
+  color: #ff6f61;
+  transform: scale(1.1);
+}
+
+/* Confirmation Message */
+.confirmation-message {
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
