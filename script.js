@@ -15,6 +15,23 @@ function onPlayerReady(event) {
   event.target.playVideo();
 }
 
+// List of random messages for the "NO!" button
+const noButtonMessages = [
+  "Are you sure? 🥺",
+  "Pretty please? 💖",
+  "I'll give you cookies! 🍪",
+  "Think about it again! 🤔",
+  "You're breaking my heart! 💔",
+  "Just say yes! 😭",
+  "I'll be really sad... 😢",
+  "I'll make you pancakes! 🥞",
+  "You're my only hope! 🌟",
+  "I'll write you a poem! 📜",
+];
+
+// Track the number of times "NO!" is clicked
+let noButtonClickCount = 0;
+
 // Add interactivity to the buttons
 document.getElementById('yesButton').addEventListener('click', function () {
   document.querySelector('.landing-screen').classList.add('d-none');
@@ -50,7 +67,17 @@ document.getElementById('yesButton').addEventListener('click', function () {
 });
 
 document.getElementById('noButton').addEventListener('click', function () {
-  alert("Aww, give it another thought! 💖");
+  // Show a random message from the list
+  const randomMessage = noButtonMessages[noButtonClickCount % noButtonMessages.length];
+  alert(randomMessage);
+
+  // Increment the click count
+  noButtonClickCount++;
+
+  // Redirect after 5 clicks
+  if (noButtonClickCount === 5) {
+    window.location.href = "https://youtu.be/SYbh6ob_R9M?t=99"; // 
+  }
 });
 
 // Load the YouTube IFrame API script
