@@ -24,6 +24,29 @@ document.getElementById('yesButton').addEventListener('click', function () {
   if (player && player.playVideo) {
     player.playVideo();
   }
+
+  // Trigger confetti animation
+  confetti({
+    particleCount: 150, // Number of confetti pieces
+    spread: 70, // How far the confetti spreads
+    origin: { y: 0.6 }, // Start from the bottom
+  });
+
+  // Add more confetti for extra celebration
+  setTimeout(() => {
+    confetti({
+      particleCount: 100,
+      angle: 60,
+      spread: 55,
+      origin: { x: 0 },
+    });
+    confetti({
+      particleCount: 100,
+      angle: 120,
+      spread: 55,
+      origin: { x: 1 },
+    });
+  }, 250);
 });
 
 document.getElementById('noButton').addEventListener('click', function () {
